@@ -28,13 +28,10 @@ export default {
 
       const user = await Auth.federatedSignIn({ provider: 'Google' }).
       then( cred => {
-
-        // If success, you will get the AWS credentials
-        localStorage.setItem('cred', JSON.stringify( cred ) );
-
         let user = Auth.currentAuthenticatedUser();
 
         console.log( user );
+        // hay que poder conseguir este usuario
       });
 
       localStorage.setItem('user',JSON.stringify(user));
