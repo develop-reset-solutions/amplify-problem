@@ -13,6 +13,7 @@
 </template>
 
 <script>
+
 import Amplify, { Auth, Hub } from 'aws-amplify';
 import awsconfig from '../assets/aws-exports';
 import _ from 'lodash'
@@ -21,9 +22,10 @@ Amplify.configure( awsconfig );
 
 export default {
   mounted(){
+    
     Auth.currentAuthenticatedUser().then(function(){
       Auth.currentSession().then(data => console.log(data.accessToken.getJwtToken()));
-    })
+    });
 
 
   },
@@ -34,10 +36,10 @@ export default {
       ).then(cred => {
 
           // If success, you will get the AWS credentials
-          console.log(cred);
+          console.log( cred );
           return Auth.currentAuthenticatedUser();
 
-      }).then(user => {
+      }).then(user =>{
 
           // Print the access token //
           Auth.currentSession().then(data => console.log(data.accessToken.getJwtToken()));

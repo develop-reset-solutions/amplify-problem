@@ -12,11 +12,11 @@ const awsconfig = {
     "oauth": {
         "domain": "resetauth.auth.us-east-2.amazoncognito.com",
         //"domain": "championstoken.auth.us-east-1.amazoncognito.com",
-        /*"scope": [
+        /* "scope": [
             "phone"   , "email"   ,
             "openid"  , "profile" ,
             "aws.cognito.signin.user.admin"
-        ],*/
+        ], */
         //"redirectSignOut" : "https://tokenchampions.com/home",
         "redirectSignOut" : "http://localhost:8000/",
         //"redirectSignIn"  : "https://tokenchampions.com/home",
